@@ -76,7 +76,7 @@ hr:not([size]) {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Barlow', sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
   color: #343a40;
@@ -620,7 +620,7 @@ progress {
     max-width: 720px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
@@ -772,7 +772,7 @@ progress {
     width: 16.6666666667%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .col-lg {
     flex: 1 0 0%;
   }
@@ -1409,7 +1409,7 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .col-lg-auto {
     flex: 0 0 auto;
     width: auto;
@@ -3550,7 +3550,7 @@ textarea.form-control-lg {
     left: auto;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .dropdown-menu-lg-start {
     --bs-position: start;
   }
@@ -4097,7 +4097,7 @@ textarea.form-control-lg {
     display: none;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -4962,7 +4962,7 @@ textarea.form-control-lg {
     border-left-width: 1px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .list-group-horizontal-lg {
     flex-direction: row;
   }
@@ -5380,7 +5380,7 @@ textarea.form-control-lg {
     max-width: 300px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .modal-lg,
 .modal-xl {
     max-width: 800px;
@@ -6245,7 +6245,7 @@ textarea.form-control-lg {
     z-index: 1020;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .sticky-lg-top {
     position: sticky;
     top: 0;
@@ -8842,7 +8842,7 @@ textarea.form-control-lg {
     text-align: center !important;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .float-lg-start {
     float: left !important;
   }
@@ -10858,10 +10858,10 @@ body {
   color: #6c757d;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   body {
     padding-top: 0;
-    padding-left: 17rem;
+    padding-left: 22rem;
   }
 }
 h1, .h1,
@@ -10882,13 +10882,8 @@ h1, .h1 {
   line-height: 1;
 }
 
-p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
-}
-
 .subheading {
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Barlow', sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
@@ -10907,7 +10902,7 @@ p.lead {
   outline-color: #d48a6e;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   #sideNav {
     padding-left: 0;
     padding-right: 0;
@@ -10917,7 +10912,7 @@ p.lead {
     left: 0;
     display: flex;
     flex-direction: column;
-    width: 17rem;
+    width: 22rem;
     height: 100vh;
   }
   #sideNav .navbar-brand {
@@ -10978,7 +10973,7 @@ section.resume-section {
   padding-right: 1rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  max-width: 75rem;
+  /* max-width: 85rem; */
 }
 section.resume-section .resume-section-content {
   width: 100%;
@@ -10989,10 +10984,10 @@ section.resume-section .resume-section-content {
     min-height: 100vh;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   section.resume-section {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
