@@ -16,29 +16,30 @@
 		<link href="css/styles.css" rel="stylesheet" />
 		<style>
 			/* 포폴용 */
-			li {list-style:none;}
+			li {}
 			img {max-width:100%;}
 
-			.portlist li {
+			.portList.typeThumbs li {
 				position: relative;
 				overflow: hidden;
 				color: #ffffff;
 				text-align: left;
+				list-style:none;
 			}
-			.portlist li * {
+			.portList.typeThumbs li * {
 				-webkit-transition: all 0.35s ease;
 				transition: all 0.35s ease;
 			}
-			.portlist li img{
+			.portList.typeThumbs li img{
 				width: 100%;
 			}
-			.portlist figure {
+			.portList.typeThumbs figure {
 				position: relative;
 				overflow: hidden;
    				margin-bottom: 0;
    				background: #000;
 			}
-			.portlist li:after {
+			.portList.typeThumbs li:after {
 				content: '';
 				position: absolute;
 				top: 0;
@@ -50,7 +51,7 @@
 				transition: all 0.35s ease;
 				opacity: 0;
 			}
-			.portlist li figcaption {
+			.portList.typeThumbs li figcaption {
 				position: absolute;
 				top: 0;
 				bottom: 0;
@@ -59,7 +60,7 @@
 				z-index: 1;
 				padding: 3vw;
 			}
-			.portlist li h3 {
+			.portList.typeThumbs li h3 {
 				font-weight: 700;
 				font-size: 2.2rem;
 				color: #ffffff;
@@ -67,21 +68,21 @@
 				-webkit-transform: translateY(40px);
 				transform: translateY(40px);
 			}
-			.portlist li p {
+			.portList.typeThumbs li p {
 				font-size: 1.2rem;
 				font-weight: 300;
 				opacity: 0;
 				-webkit-transform: translateY(40px);
 				transform: translateY(40px);
 			}
-			.portlist li .date {
+			.portList.typeThumbs li .date {
 				margin-top: 1.2vw;
 				margin-bottom: 1vw;
 				font-size: 1.2rem;
 				color: #eead0a;
 				text-align: right;
 			}
-			.portlist li .text {
+			.portList.typeThumbs li .text {
 				position: absolute;
 				margin-bottom: 0;
 				bottom: 3vw;
@@ -89,13 +90,13 @@
 				right: 4.5rem;
 				word-break: keep-all;
 			}
-			.portlist li .text span {
+			.portList.typeThumbs li .text span {
 				display: inline-block;
 				font-size: 0.85em;
 				color: #969696;
 				line-height: 1.2em;
 			}
-			.portlist li .fa-chevron-right {
+			.portList.typeThumbs li .fa-chevron-right {
 				position: absolute;
 				bottom: 3vw;
     			right: calc(var(--bs-gutter-x) * 2);
@@ -104,7 +105,7 @@
 				-webkit-transform: translateX(-20px);
 				transform: translateX(-20px);
 			}
-			.portlist li a {
+			.portList.typeThumbs li a {
 				position: absolute;
 				top: 0;
 				bottom: 0;
@@ -112,14 +113,14 @@
 				right: 0;
 				z-index: 1;
 			}
-			.portlist li:hover img{
+			.portList.typeThumbs li:hover img{
 				zoom: 1;
 				filter: alpha(opacity=50);
 				-webkit-opacity: 0.5;
 				opacity: 0.5;
 				transform:scale(1.1);
 			}
-			.portlist li:hover:after {
+			.portList.typeThumbs li:hover:after {
 				opacity: 1;
 				position: absolute;
 				top: 1vw;
@@ -127,42 +128,48 @@
 				left:2vw;
 				right: 2vw;
 			}
-			.portlist li:hover h3,
-			.portlist li:hover p,
-			.portlist li:hover .fa-chevron-right {
+			.portList.typeThumbs li:hover h3,
+			.portList.typeThumbs li:hover p,
+			.portList.typeThumbs li:hover .fa-chevron-right {
 				-webkit-transform: translate(0px, 0px);
 				transform: translate(0px, 0px);
 				opacity: 1;
 			}
 
+			.portList.typeText {}
+			.portList.typeText li {}
+			.portList.typeText li p {font-size: 1rem}
+			.portList.typeText li p .tit {font-size: 1.2rem; font-weight: 700; color:#343a40}
+			.portList.typeText li .date {font-size: 0.75rem;}
+
 			@media (min-width: 768px) and (max-width: 1440px) {
-				.portlist li h3 {
+				.portList.typeThumbs li h3 {
 					font-size: 1.82vw;
 				}
-				.portlist li .text,
-				.portlist li .date {
+				.portList.typeThumbs li .text,
+				.portList.typeThumbs li .date {
 					font-size: 1vw;
 				}
 			}
 			@media (max-width: 768px) {
-				.portlist li figcaption {
+				.portList.typeThumbs li figcaption {
 					padding: 6vw;
 				}
-				.portlist li h3 {
+				.portList.typeThumbs li h3 {
 					font-size: 4.6vw;
 				}
-				.portlist li .date {
+				.portList.typeThumbs li .date {
 					font-size: 2.6vw;
 				}
-				.portlist li .text {
+				.portList.typeThumbs li .text {
 					right: 13vw;
 					left: 6vw;
 					font-size: 2.6vw;
 				}
-				.portlist li .fa-chevron-right {
+				.portList.typeThumbs li .fa-chevron-right {
 					font-size: 5vw;
 				}
-				.portlist li:hover:after {
+				.portList.typeThumbs li:hover:after {
 					top: 2vw;
 					bottom: 2vw;
 					left: calc(2vw + 1rem);
@@ -183,7 +190,7 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mainwork">main work</a></li>
+					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mainwork">Portfolio</a></li>
 					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
 					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
 				</ul>
@@ -219,13 +226,12 @@
 				</div>
 			</section>
 			<hr class="m-0" />
-			<!-- main work -->
+			<!-- Portfolio -->
 			<section class="resume-section" id="mainwork">
 				<div class="resume-section-content">
-					<h2 class="mb-5">Main work</h2>
-					<!-- <ul class="row row-cols-1 row-cols-sm-3 p-0 portlist"> pc 3줄 -->
-					<ul class="row row-cols-1 row-cols-md-2 p-0 portlist"> <!-- pc 3줄 -->
-
+					<h2 class="mb-5">Portfolio</h2>
+					<!-- <ul class="row row-cols-1 row-cols-sm-3 p-0 portList"> pc 3줄 -->
+					<ul class="row row-cols-1 row-cols-md-2 p-0 portList typeThumbs"> <!-- pc 3줄 -->
 						<!-- <li class="mb-3">
 							<figure>
 								<img src="./images/pp_bsex.jpg" alt="2023 부산 엑스포 유치기원">
@@ -361,7 +367,120 @@
 								<a href="https://smartgeoexpo.kr/fairDash.do" target="_blink"></a>
 							</figure>
 						</li>
-
+					</ul>
+					<ul class="portList typeText">
+						<!-- <li>
+							<p><span class="tit">강남 미니쉬치과-리뉴얼</span></p>
+							<p class="date">2024.08 ~2024.10</p>
+						</li> -->
+						<li>
+							<p><span class="tit">부산엑스포유치기원</span> - 이벤트페이지구축,운영(PC/모바일)</p>
+							<p class="date">2023.03 - 2023.06</p>
+						</li>
+						<li>
+							<p><span class="tit">갤럭시폴드4사전예약</span> - 프로모션페이지구축(PC/모바일),반응형</p>
+							<p class="date">2022.07 - 2022.09</p>
+						</li>
+						<li>
+							<p><span class="tit">코리아핀테크위크2021</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2021.04 - 2021.0</p>
+						</li>
+						<li>
+							<p><span class="tit">글로벌바이오컨퍼런스</span> - 사이트리뉴얼,운영(PC/모바일),반응형</p>
+							<p class="date">2021.04 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit"> 2021 서울국제소싱페어</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2021.03 - 2021.0</p>
+						</li>
+						<li>
+							<p><span class="tit">강원의료기기전시사이트</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2021.02 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit"> 2020차세대미디어대전</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2021.01 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">서울디자인페스티벌</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2021.09 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">부산디자인페스티벌</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2021.09 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">서울리빙디자인페어</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2021.09 - 2021.0</p>
+						</li>
+						<li>
+							<p><span class="tit"> 2020스마트국토엑스포</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2021.08 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">온라인서울푸드</span> - 사이트리뉴얼,운영(PC/모바일),반응형</p>
+							<p class="date">2021.07 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">바이오플러스</span> - 사이트리뉴얼,운영(PC/모바일),반응형</p>
+							<p class="date">2021.06 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit"> 2020에듀테크코리아</span> - 사이트리뉴얼,운영(PC/모바일),반응형</p>
+							<p class="date">2021.05 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">서울국제화장품미용산업박람회</span> - 사이트리뉴얼,운영(PC/모바일),반응형</p>
+							<p class="date">2021.04 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">서울MICE얼라이언스</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2020.03 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">광주베이비&키즈페어</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2020.01 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit"> 2020광주ACEFair</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2019.12 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">한국물포럼</span> - 사이트리뉴얼,운영(PC/모바일),반응형</p>
+							<p class="date">2019.11 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit"> 2020한국건설안전박람회</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2019.08 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">안전산업박람회</span> - 사이트리뉴얼,운영(PC/모바일),반응형</p>
+							<p class="date">2019.08 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">사내관리자사이트개편</span> - 사이트리뉴얼,운영(PC),</p>
+							<p class="date"> 2019.06 - 2019.12</p>
+						</li>
+						<li>
+							<p><span class="tit">양봉협회</span> - 사이트리뉴얼,운영(PC/모바일),반응형</p>
+							<p class="date">2019.04 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit">힐링페어</span> - 사이트운영(PC/모바일),반응형</p>
+							<p class="date">2019.03 - 2021.06</p>
+						</li>
+						<li>
+							<p><span class="tit"> KIAFE-첨단농축산기자재박람회</span> - 사이트구축,운영(PC/모바일),반응형</p>
+							<p class="date">2019.02 - 2019.03</p>
+						</li>
+						<li>
+							<p><span class="tit">교학사체육전자교과서</span> - 구축(PC)</p>
+							<p class="date">2018.10 - 2019.02</p>
+						</li>
+						<li>
+							<p><span class="tit">하이브리드어플제작</span> - 어플구축,운영(모바일)</p>
+							<p class="date">2016.08 - 2017.0</p>
+						</li>
 					</ul>
 				</div>
 			</section>
